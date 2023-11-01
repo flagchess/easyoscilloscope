@@ -1,0 +1,16 @@
+xst -intstyle ise -ifn "D:/szyjy/prj/exp7/EXP7_extra_tea/adda_test.xst" -ofn "D:/szyjy/prj/exp7/EXP7_extra_tea/adda_test.syr" 
+ngdbuild -intstyle ise -dd _ngo -sd ipcore_dir -nt timestamp -uc adda_test.ucf -p xc6slx9-ftg256-2 adda_test_cs.ngc adda_test.ngd  
+map -intstyle ise -p xc6slx9-ftg256-2 -w -logic_opt off -ol high -t 1 -xt 0 -r 4 -global_opt speed -equivalent_register_removal on -mt off -ir off -pr off -lc off -power off -o adda_test_map.ncd adda_test.ngd adda_test.pcf 
+par -w -intstyle ise -ol high -mt off adda_test_map.ncd adda_test.ncd adda_test.pcf 
+trce -intstyle ise -v 3 -s 2 -n 3 -fastpaths -xml adda_test.twx adda_test.ncd -o adda_test.twr adda_test.pcf -ucf adda_test.ucf 
+bitgen -intstyle ise -f adda_test.ut adda_test.ncd 
+ngdbuild -intstyle ise -dd _ngo -sd ipcore_dir -nt timestamp -uc adda_test.ucf -p xc6slx9-ftg256-2 adda_test_cs.ngc adda_test.ngd  
+map -intstyle ise -p xc6slx9-ftg256-2 -w -logic_opt off -ol high -t 1 -xt 0 -r 4 -global_opt speed -equivalent_register_removal on -mt off -ir off -pr off -lc off -power off -o adda_test_map.ncd adda_test.ngd adda_test.pcf 
+par -w -intstyle ise -ol high -mt off adda_test_map.ncd adda_test.ncd adda_test.pcf 
+trce -intstyle ise -v 3 -s 2 -n 3 -fastpaths -xml adda_test.twx adda_test.ncd -o adda_test.twr adda_test.pcf -ucf adda_test.ucf 
+bitgen -intstyle ise -f adda_test.ut adda_test.ncd 
+ngdbuild -intstyle ise -dd _ngo -sd ipcore_dir -nt timestamp -uc adda_test.ucf -p xc6slx9-ftg256-2 adda_test_cs.ngc adda_test.ngd  
+map -intstyle ise -p xc6slx9-ftg256-2 -w -logic_opt off -ol high -t 1 -xt 0 -r 4 -global_opt speed -equivalent_register_removal on -mt off -ir off -pr off -lc off -power off -o adda_test_map.ncd adda_test.ngd adda_test.pcf 
+par -w -intstyle ise -ol high -mt off adda_test_map.ncd adda_test.ncd adda_test.pcf 
+trce -intstyle ise -v 3 -s 2 -n 3 -fastpaths -xml adda_test.twx adda_test.ncd -o adda_test.twr adda_test.pcf -ucf adda_test.ucf 
+bitgen -intstyle ise -f adda_test.ut adda_test.ncd 

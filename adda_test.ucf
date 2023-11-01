@@ -1,0 +1,52 @@
+NET crystal_clk LOC = T8 | TNM_NET = sys_clk_pin;
+TIMESPEC TS_sys_clk_pin = PERIOD sys_clk_pin 50 MHz;
+##
+#NET rst_n                  LOC = L3 | IOSTANDARD = "LVCMOS33"; ## reset pushbutton
+########KEY Pin define#####################
+NET key1             LOC = C3 | IOSTANDARD = "LVCMOS33";       ## KEY1
+NET key2             LOC = D3 | IOSTANDARD = "LVCMOS33";       ## KEY2
+NET key3             LOC = E4 | IOSTANDARD = "LVCMOS33";       ## KEY3
+NET key4             LOC = E3 | IOSTANDARD = "LVCMOS33";       ## KEY4
+
+########AD/DA Extended IO(J3)##################### 
+NET daclk                  LOC = A5 | IOSTANDARD = "LVCMOS33";       ## 5 
+NET dadata[0]              LOC = A10 | IOSTANDARD = "LVCMOS33";      ## 13 
+NET dadata[1]             LOC = A9 | IOSTANDARD = "LVCMOS33";       ## 12
+NET dadata[2]              LOC = C8 | IOSTANDARD = "LVCMOS33";       ## 11
+NET dadata[3]              LOC = A8 | IOSTANDARD = "LVCMOS33";       ## 10
+NET dadata[4]              LOC = B8 | IOSTANDARD = "LVCMOS33";       ## 9
+NET dadata[5]              LOC = A7 | IOSTANDARD = "LVCMOS33";       ## 8
+NET dadata[6]             LOC = A6 | IOSTANDARD = "LVCMOS33";       ## 7
+NET dadata[7]              LOC = B6 | IOSTANDARD = "LVCMOS33";       ## 6 
+
+
+NET adclk                     LOC = C10 | IOSTANDARD = "LVCMOS33";        ## 29
+NET addata_in[0]              LOC = B15 | IOSTANDARD = "LVCMOS33";        ## 21
+NET addata_in[1]              LOC = B16 | IOSTANDARD = "LVCMOS33";        ## 22
+NET addata_in[2]              LOC = C15 | IOSTANDARD = "LVCMOS33";        ## 23
+NET addata_in[3]              LOC = C16 | IOSTANDARD = "LVCMOS33";        ## 24
+NET addata_in[4]              LOC = D16 | IOSTANDARD = "LVCMOS33";       ## 25
+NET addata_in[5]              LOC = E15 | IOSTANDARD = "LVCMOS33";       ## 26
+NET addata_in[6]              LOC = C9 | IOSTANDARD = "LVCMOS33";       ## 27
+NET addata_in[7]              LOC = E11 | IOSTANDARD = "LVCMOS33";       ## 28
+
+
+########LED Pin define#####################
+NET LED0                LOC = P4 | IOSTANDARD = "LVCMOS33";       ## LED1
+NET LED1                LOC = N5 | IOSTANDARD = "LVCMOS33";       ## LED2
+NET LED2                LOC = P5 | IOSTANDARD = "LVCMOS33";       ## LED3
+NET LED3                LOC = M6 | IOSTANDARD = "LVCMOS33";       ## LED4
+
+NET status_test         LOC = M5 | IOSTANDARD = "LVCMOS33";       ## test IO
+
+#PIN "PLL_inst/clkout2_buf.O" CLOCK_DEDICATED_ROUTE = FALSE;
+#PIN "PLL_inst/clkout1_buf.O" CLOCK_DEDICATED_ROUTE = FALSE;
+#PIN "instance_name/clkout2_buf.O" CLOCK_DEDICATED_ROUTE = FALSE; 
+#PIN "instance_name/clkout1_buf.O" CLOCK_DEDICATED_ROUTE = FALSE;
+#PIN "instance_name/clkout2_buf.O" CLOCK_DEDICATED_ROUTE = FALSE;
+#PIN "instance_name/clkout3_buf.O" CLOCK_DEDICATED_ROUTE = FALSE;
+#PIN "instance_name/clkout4_buf.O" CLOCK_DEDICATED_ROUTE = FALSE;
+#PIN "instance_name/clkout5_buf.O" CLOCK_DEDICATED_ROUTE = FALSE;
+#PIN "instance_name/clkout6_buf.O" CLOCK_DEDICATED_ROUTE = FALSE;
+PIN "pll_inst/clkout1_buf.O" CLOCK_DEDICATED_ROUTE = FALSE;
+PIN "pll_inst/clkout2_buf.O" CLOCK_DEDICATED_ROUTE = FALSE;

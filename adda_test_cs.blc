@@ -1,0 +1,31 @@
+Release 14.7 ngcbuild P.20131013 (nt)
+Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+
+Command Line: ngcbuild.exe -dd D:/szyjy/prj/exp7/EXP7_extra_tea/_ngo -sd
+ipcore_dir -p xc6slx9-ftg256-2 -i D:\szyjy\prj\exp7\EXP7_extra_tea\adda_test.ngc
+D:\szyjy\prj\exp7\EXP7_extra_tea\adda_test_cs.ngc
+
+Reading NGO file "D:/szyjy/prj/exp7/EXP7_extra_tea/adda_test.ngc" ...
+Loading design module "ipcore_dir/adc_fifo.ngc"...
+Loading design module "ipcore_dir/ROM_WAVE.ngc"...
+Loading design module "ipcore_dir/ROM_square.ngc"...
+Loading design module "ipcore_dir/ROM_TRIANG.ngc"...
+
+Partition Implementation Status
+-------------------------------
+
+  No Partitions were found in this design.
+
+-------------------------------
+
+NGCBUILD Design Results Summary:
+  Number of errors:     0
+  Number of warnings:   0
+
+Total memory usage is 157308 kilobytes
+
+Writing NGC file "D:/szyjy/prj/exp7/EXP7_extra_tea/adda_test_cs.ngc" ...
+Total REAL time to NGCBUILD completion:  1 sec
+Total CPU time to NGCBUILD completion:   1 sec
+
+Writing NGCBUILD log file "D:/szyjy/prj/exp7/EXP7_extra_tea/adda_test_cs.blc"...

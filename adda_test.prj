@@ -1,0 +1,7 @@
+verilog work "ipcore_dir/PLL.v"
+verilog work "trig.v"
+verilog work "ipcore_dir/ROM_WAVE.v"
+verilog work "ipcore_dir/ROM_TRIANG.v"
+verilog work "ipcore_dir/ROM_square.v"
+verilog work "ipcore_dir/adc_fifo.v"
+verilog work "adda_test.v"

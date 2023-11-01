@@ -1,0 +1,104 @@
+#:C39    
+#Xilinx FPGA Editor Command Log File
+#Editor Version:
+#:V   NT M2.1 P.20131013
+#Current Working Directory:
+#:D   D:\szyjy\prj\exp3\EXP3_adda_test_tea
+#Date/Time:
+#:T   Fri Apr 09 15:42:47 2021
+#------------------------------
+	#Reading adda_test.ncd...
+	#Loading device for application Rf_Device from file '6slx9.nph' in environment D:\Xilinx\14.7\ISE_DS\ISE\.
+	#   "adda_test" is an NCD, version 3.2, device xc6slx9, package ftg256, speed -2
+	#Design creation date: 2021.04.09.07.26.01
+	#Building chip graphics...
+	#Loading speed info...
+	#1
+setattr main edit-mode no-logic-changes
+	#2
+select -k comp 'adclk'
+	#3
+unselect -all
+	#4
+select comp 'adclk'
+	#comp "adclk",  site "C10",  bonded type = IOB,  pad name = PAD28,  pin name = C10  (RPM grid X49Y248)
+	#5
+unselect -all
+	#6
+select net 'adclk_OBUF'
+	#net "adclk_OBUF"
+	#7
+unselect net 'adclk_OBUF'
+	#8
+select -k comp 'adclk'
+	#9
+unselect -all
+	#10
+select comp 'adclk'
+	#comp "adclk",  site "C10",  bonded type = IOB,  pad name = PAD28,  pin name = C10  (RPM grid X49Y248)
+	#11
+unselect -all
+	#12
+select comp 'adclk'
+	#comp "adclk",  site "C10",  bonded type = IOB,  pad name = PAD28,  pin name = C10  (RPM grid X49Y248)
+	#13
+post block
+	#14
+unselect comp 'adclk'
+	#15
+select -k comp 'addata<6>'
+	#16
+unselect -all
+	#17
+unselect -all
+	#18
+select net 'addata_6_IBUF'
+	#net "addata_6_IBUF"
+	#19
+unselect net 'addata_6_IBUF'
+	#20
+select -k comp 'addata<5>'
+	#21
+unselect -all
+	#22
+select net 'addata_5_IBUF'
+	#net "addata_5_IBUF"
+	#23
+unselect net 'addata_5_IBUF'
+	#24
+select -k comp 'addata<4>'
+	#25
+unselect -all
+	#26
+select net 'addata_4_IBUF'
+	#net "addata_4_IBUF"
+	#27
+unselect net 'addata_4_IBUF'
+	#28
+select -k comp 'addata<2>'
+	#29
+unselect -all
+	#30
+unselect -all
+	#31
+select net 'addata_2_IBUF'
+	#net "addata_2_IBUF"
+	#32
+unselect -all
+	#33
+select -k comp 'addata<0>'
+	#34
+unselect -all
+	#35
+unselect -all
+	#36
+select net 'addata_0_IBUF'
+	#net "addata_0_IBUF"
+	#37
+unselect net 'addata_0_IBUF'
+	#38
+select -k comp 'addata<1>'
+	#39
+unselect -all
+	#40
+select net 'addata_1_IBUF'

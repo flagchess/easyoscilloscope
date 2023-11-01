@@ -1,0 +1,702 @@
+Release 14.7 - xst P.20131013 (nt)
+Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+--> Parameter TMPDIR set to xst/projnav.tmp
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.14 secs
+ 
+--> Parameter xsthdpdir set to xst
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.14 secs
+ 
+--> Reading design: adda_test.prj
+
+TABLE OF CONTENTS
+  1) Synthesis Options Summary
+  2) HDL Parsing
+  3) HDL Elaboration
+  4) HDL Synthesis
+       4.1) HDL Synthesis Report
+  5) Advanced HDL Synthesis
+       5.1) Advanced HDL Synthesis Report
+  6) Low Level Synthesis
+  7) Partition Report
+  8) Design Summary
+       8.1) Primitive and Black Box Usage
+       8.2) Device utilization summary
+       8.3) Partition Resource Summary
+       8.4) Timing Report
+            8.4.1) Clock Information
+            8.4.2) Asynchronous Control Signals Information
+            8.4.3) Timing Summary
+            8.4.4) Timing Details
+            8.4.5) Cross Clock Domains Report
+
+
+=========================================================================
+*                      Synthesis Options Summary                        *
+=========================================================================
+---- Source Parameters
+Input File Name                    : "adda_test.prj"
+Ignore Synthesis Constraint File   : NO
+
+---- Target Parameters
+Output File Name                   : "adda_test"
+Output Format                      : NGC
+Target Device                      : xc6slx9-2-ftg256
+
+---- Source Options
+Top Module Name                    : adda_test
+Automatic FSM Extraction           : YES
+FSM Encoding Algorithm             : Auto
+Safe Implementation                : No
+FSM Style                          : LUT
+RAM Extraction                     : Yes
+RAM Style                          : Auto
+ROM Extraction                     : Yes
+Shift Register Extraction          : YES
+ROM Style                          : Auto
+Resource Sharing                   : YES
+Asynchronous To Synchronous        : NO
+Shift Register Minimum Size        : 2
+Use DSP Block                      : Auto
+Automatic Register Balancing       : No
+
+---- Target Options
+LUT Combining                      : Auto
+Reduce Control Sets                : Auto
+Add IO Buffers                     : YES
+Global Maximum Fanout              : 100000
+Add Generic Clock Buffer(BUFG)     : 16
+Register Duplication               : YES
+Optimize Instantiated Primitives   : NO
+Use Clock Enable                   : Auto
+Use Synchronous Set                : Auto
+Use Synchronous Reset              : Auto
+Pack IO Registers into IOBs        : Auto
+Equivalent register Removal        : YES
+
+---- General Options
+Optimization Goal                  : Speed
+Optimization Effort                : 1
+Power Reduction                    : NO
+Keep Hierarchy                     : No
+Netlist Hierarchy                  : As_Optimized
+RTL Output                         : Yes
+Global Optimization                : AllClockNets
+Read Cores                         : YES
+Write Timing Constraints           : NO
+Cross Clock Analysis               : NO
+Hierarchy Separator                : /
+Bus Delimiter                      : <>
+Case Specifier                     : Maintain
+Slice Utilization Ratio            : 100
+BRAM Utilization Ratio             : 100
+DSP48 Utilization Ratio            : 100
+Auto BRAM Packing                  : NO
+Slice Utilization Ratio Delta      : 5
+
+---- Other Options
+Cores Search Directories           : {"ipcore_dir"  }
+
+=========================================================================
+
+
+=========================================================================
+*                          HDL Parsing                                  *
+=========================================================================
+Analyzing Verilog file "D:\szyjy\prj\exp7\EXP7_extra_tea\ipcore_dir\PLL.v" into library work
+Parsing module <PLL>.
+Analyzing Verilog file "D:\szyjy\prj\exp7\EXP7_extra_tea\trig.v" into library work
+Parsing module <trig>.
+Analyzing Verilog file "D:\szyjy\prj\exp7\EXP7_extra_tea\ipcore_dir\ROM_WAVE.v" into library work
+Parsing module <ROM_WAVE>.
+Analyzing Verilog file "D:\szyjy\prj\exp7\EXP7_extra_tea\ipcore_dir\ROM_TRIANG.v" into library work
+Parsing module <ROM_TRIANG>.
+Analyzing Verilog file "D:\szyjy\prj\exp7\EXP7_extra_tea\ipcore_dir\ROM_square.v" into library work
+Parsing module <ROM_square>.
+Analyzing Verilog file "D:\szyjy\prj\exp7\EXP7_extra_tea\ipcore_dir\adc_fifo.v" into library work
+Parsing module <adc_fifo>.
+Analyzing Verilog file "D:\szyjy\prj\exp7\EXP7_extra_tea\adda_test.v" into library work
+Parsing module <adda_test>.
+WARNING:HDLCompiler:751 - "D:\szyjy\prj\exp7\EXP7_extra_tea\adda_test.v" Line 61: Redeclaration of ansi port dadata is not allowed
+WARNING:HDLCompiler:751 - "D:\szyjy\prj\exp7\EXP7_extra_tea\adda_test.v" Line 70: Redeclaration of ansi port LED1 is not allowed
+WARNING:HDLCompiler:751 - "D:\szyjy\prj\exp7\EXP7_extra_tea\adda_test.v" Line 71: Redeclaration of ansi port LED2 is not allowed
+WARNING:HDLCompiler:751 - "D:\szyjy\prj\exp7\EXP7_extra_tea\adda_test.v" Line 72: Redeclaration of ansi port LED3 is not allowed
+WARNING:HDLCompiler:751 - "D:\szyjy\prj\exp7\EXP7_extra_tea\adda_test.v" Line 368: Redeclaration of ansi port status_test is not allowed
+
+=========================================================================
+*                            HDL Elaboration                            *
+=========================================================================
+WARNING:HDLCompiler:1016 - "D:\szyjy\prj\exp7\EXP7_extra_tea\adda_test.v" Line 341: Port rst is not connected to this instance
+
+Elaborating module <adda_test>.
+
+Elaborating module <PLL>.
+
+Elaborating module <IBUFG>.
+
+Elaborating module <DCM_SP(CLKDV_DIVIDE=2.0,CLKFX_DIVIDE=1,CLKFX_MULTIPLY=4,CLKIN_DIVIDE_BY_2="FALSE",CLKIN_PERIOD=20.0,CLKOUT_PHASE_SHIFT="NONE",CLK_FEEDBACK="1X",DESKEW_ADJUST="SYSTEM_SYNCHRONOUS",PHASE_SHIFT=0,STARTUP_WAIT="FALSE")>.
+WARNING:HDLCompiler:1127 - "D:\szyjy\prj\exp7\EXP7_extra_tea\ipcore_dir\PLL.v" Line 132: Assignment to status_int ignored, since the identifier is never used
+
+Elaborating module <BUFG>.
+WARNING:HDLCompiler:189 - "D:\szyjy\prj\exp7\EXP7_extra_tea\adda_test.v" Line 87: Size mismatch in connection of port <RESET>. Formal port size is 1-bit while actual signal size is 32-bit.
+
+Elaborating module <ROM_WAVE>.
+WARNING:HDLCompiler:1499 - "D:\szyjy\prj\exp7\EXP7_extra_tea\ipcore_dir\ROM_WAVE.v" Line 39: Empty module <ROM_WAVE> remains a black box.
+
+Elaborating module <ROM_square>.
+WARNING:HDLCompiler:1499 - "D:\szyjy\prj\exp7\EXP7_extra_tea\ipcore_dir\ROM_square.v" Line 39: Empty module <ROM_square> remains a black box.
+
+Elaborating module <ROM_TRIANG>.
+WARNING:HDLCompiler:1499 - "D:\szyjy\prj\exp7\EXP7_extra_tea\ipcore_dir\ROM_TRIANG.v" Line 39: Empty module <ROM_TRIANG> remains a black box.
+WARNING:HDLCompiler:413 - "D:\szyjy\prj\exp7\EXP7_extra_tea\adda_test.v" Line 200: Result of 3-bit expression is truncated to fit in 2-bit target.
+
+Elaborating module <adc_fifo>.
+WARNING:HDLCompiler:1499 - "D:\szyjy\prj\exp7\EXP7_extra_tea\ipcore_dir\adc_fifo.v" Line 39: Empty module <adc_fifo> remains a black box.
+
+Elaborating module <trig>.
+WARNING:HDLCompiler:413 - "D:\szyjy\prj\exp7\EXP7_extra_tea\trig.v" Line 75: Result of 12-bit expression is truncated to fit in 11-bit target.
+WARNING:HDLCompiler:413 - "D:\szyjy\prj\exp7\EXP7_extra_tea\trig.v" Line 95: Result of 17-bit expression is truncated to fit in 16-bit target.
+WARNING:HDLCompiler:413 - "D:\szyjy\prj\exp7\EXP7_extra_tea\trig.v" Line 166: Result of 17-bit expression is truncated to fit in 16-bit target.
+WARNING:HDLCompiler:552 - "D:\szyjy\prj\exp7\EXP7_extra_tea\adda_test.v" Line 341: Input port rst is not connected on this instance
+
+=========================================================================
+*                           HDL Synthesis                               *
+=========================================================================
+
+Synthesizing Unit <adda_test>.
+    Related source file is "D:\szyjy\prj\exp7\EXP7_extra_tea\adda_test.v".
+    Set property "KEEP = TRUE" for signal <fifo_out>.
+WARNING:Xst:2898 - Port 'rst', unconnected in block instance 'trig_ins', is tied to GND.
+    Register <rom_triang_addr> equivalent to <rom_sin_addr> has been removed
+    Register <rom_squar_addr> equivalent to <rom_sin_addr> has been removed
+    Found 1-bit register for signal <key_scan4>.
+    Found 1-bit register for signal <key_scan3>.
+    Found 1-bit register for signal <key_scan2>.
+    Found 1-bit register for signal <key_scan1>.
+    Found 1-bit register for signal <key_scan_dly4>.
+    Found 1-bit register for signal <key_scan_dly3>.
+    Found 1-bit register for signal <key_scan_dly2>.
+    Found 1-bit register for signal <key_scan_dly1>.
+    Found 1-bit register for signal <flag_key4>.
+    Found 1-bit register for signal <flag_key3>.
+    Found 1-bit register for signal <flag_key2>.
+    Found 1-bit register for signal <flag_key1>.
+    Found 3-bit register for signal <cnt>.
+    Found 24-bit register for signal <step>.
+    Found 24-bit register for signal <accumulator>.
+    Found 9-bit register for signal <rom_addr>.
+    Found 9-bit register for signal <rom_sin_addr>.
+    Found 2-bit register for signal <which_wave_cnt>.
+    Found 8-bit register for signal <rom_data>.
+    Found 8-bit register for signal <dadata>.
+    Found 8-bit register for signal <ad_data>.
+    Found 1-bit register for signal <fifo_rst>.
+    Found 8-bit register for signal <trig_level>.
+    Found 8-bit register for signal <ad_data_trig>.
+    Found 1-bit register for signal <digital_trigged_sig>.
+    Found 1-bit register for signal <trig_en>.
+    Found 4-bit register for signal <extract_cnt>.
+    Found 16-bit register for signal <extract_num>.
+    Found 1-bit register for signal <LED1>.
+    Found 1-bit register for signal <LED2>.
+    Found 1-bit register for signal <LED3>.
+    Found 1-bit register for signal <status_test>.
+    Found 20-bit register for signal <count>.
+    Found 8-bit subtractor for signal <trig_level[7]_GND_1_o_sub_46_OUT> created at line 292.
+    Found 20-bit adder for signal <count[19]_GND_1_o_add_2_OUT> created at line 110.
+    Found 3-bit adder for signal <cnt[2]_GND_1_o_add_7_OUT> created at line 135.
+    Found 24-bit adder for signal <accumulator[23]_step[23]_add_14_OUT> created at line 157.
+    Found 2-bit adder for signal <which_wave_cnt[1]_GND_1_o_add_23_OUT> created at line 200.
+    Found 4-bit adder for signal <extract_cnt[3]_GND_1_o_add_50_OUT> created at line 316.
+    Found 8x24-bit Read Only RAM for signal <cnt[2]_GND_1_o_wide_mux_11_OUT>
+    Found 8x16-bit Read Only RAM for signal <_n0161>
+    Found 8-bit 4-to-1 multiplexer for signal <which_wave_cnt[1]_rom_sin_data[7]_wide_mux_27_OUT> created at line 205.
+    Found 8-bit comparator lessequal for signal <n0055> created at line 290
+    Found 8-bit comparator greater for signal <ad_data_trig[7]_trig_level[7]_LessThan_47_o> created at line 292
+    Found 8-bit comparator greater for signal <GND_1_o_fifo_out[7]_LessThan_68_o> created at line 371
+    WARNING:Xst:2404 -  FFs/Latches <trig_hysteresis<1:1>> (without init value) have a constant value of 1 in block <adda_test>.
+    WARNING:Xst:2404 -  FFs/Latches <trig_hysteresis<1:2>> (without init value) have a constant value of 0 in block <adda_test>.
+    WARNING:Xst:2404 -  FFs/Latches <trig_level_inc<1:4>> (without init value) have a constant value of 0 in block <adda_test>.
+    WARNING:Xst:2404 -  FFs/Latches <trig_level_inc<4:4>> (without init value) have a constant value of 1 in block <adda_test>.
+    WARNING:Xst:2404 -  FFs/Latches <trig_level_inc<4:5>> (without init value) have a constant value of 0 in block <adda_test>.
+    Summary:
+	inferred   2 RAM(s).
+	inferred   6 Adder/Subtractor(s).
+	inferred 170 D-type flip-flop(s).
+	inferred   3 Comparator(s).
+	inferred   2 Multiplexer(s).
+Unit <adda_test> synthesized.
+
+Synthesizing Unit <PLL>.
+    Related source file is "D:\szyjy\prj\exp7\EXP7_extra_tea\ipcore_dir\PLL.v".
+    Summary:
+	no macro.
+Unit <PLL> synthesized.
+
+Synthesizing Unit <trig>.
+    Related source file is "D:\szyjy\prj\exp7\EXP7_extra_tea\trig.v".
+    Set property "KEEP = TRUE" for signal <fifo_wr_cnt>.
+    Set property "KEEP = TRUE" for signal <full_flag_reg>.
+WARNING:Xst:647 - Input <datain> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+WARNING:Xst:647 - Input <rst> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+    Found 1-bit register for signal <ready_dly>.
+    Found 1-bit register for signal <digital_trigged_dly>.
+    Found 1-bit register for signal <digital_trigged_sig_dly>.
+    Found 1-bit register for signal <empty_dly>.
+    Found 1-bit register for signal <ready>.
+    Found 11-bit register for signal <pre_tri_cnt>.
+    Found 1-bit register for signal <cmp_result>.
+    Found 16-bit register for signal <auto_tri_cnt>.
+    Found 1-bit register for signal <auto_trig>.
+    Found 1-bit register for signal <digital_trigged>.
+    Found 1-bit register for signal <fifo_rd>.
+    Found 1-bit register for signal <fifo_wr>.
+    Found 16-bit register for signal <fifo_wr_cnt>.
+    Found 1-bit register for signal <fifo_wr_en>.
+    Found 1-bit register for signal <full_flag_reg>.
+    Found 1-bit register for signal <fifo_rd_en>.
+    Found 1-bit register for signal <full_dly>.
+    Found 11-bit adder for signal <pre_tri_cnt[10]_GND_10_o_add_5_OUT> created at line 75.
+    Found 16-bit adder for signal <auto_tri_cnt[15]_GND_10_o_add_11_OUT> created at line 95.
+    Found 16-bit adder for signal <fifo_wr_cnt[15]_GND_10_o_add_22_OUT> created at line 166.
+    Found 16-bit comparator equal for signal <fifo_wr_cnt[15]_extract_num[15]_equal_28_o> created at line 177
+    WARNING:Xst:2404 -  FFs/Latches <pre_tri_cnt_config<1:2>> (without init value) have a constant value of 0 in block <trig>.
+    WARNING:Xst:2404 -  FFs/Latches <pre_tri_cnt_config<2:6>> (without init value) have a constant value of 1 in block <trig>.
+    WARNING:Xst:2404 -  FFs/Latches <pre_tri_cnt_config<6:6>> (without init value) have a constant value of 0 in block <trig>.
+    WARNING:Xst:2404 -  FFs/Latches <pre_tri_cnt_config<6:6>> (without init value) have a constant value of 1 in block <trig>.
+    WARNING:Xst:2404 -  FFs/Latches <pre_tri_cnt_config<6:7>> (without init value) have a constant value of 0 in block <trig>.
+INFO:Xst:2774 - HDL ADVISOR - KEEP property attached to signal fifo_wr_cnt may hinder XST clustering optimizations.
+INFO:Xst:2774 - HDL ADVISOR - KEEP property attached to signal full_flag_reg may hinder XST clustering optimizations.
+    Summary:
+	inferred   3 Adder/Subtractor(s).
+	inferred  57 D-type flip-flop(s).
+	inferred   1 Comparator(s).
+	inferred   2 Multiplexer(s).
+Unit <trig> synthesized.
+
+=========================================================================
+HDL Synthesis Report
+
+Macro Statistics
+# RAMs                                                 : 2
+ 8x16-bit single-port Read Only RAM                    : 1
+ 8x24-bit single-port Read Only RAM                    : 1
+# Adders/Subtractors                                   : 9
+ 11-bit adder                                          : 1
+ 16-bit adder                                          : 2
+ 2-bit adder                                           : 1
+ 20-bit adder                                          : 1
+ 24-bit adder                                          : 1
+ 3-bit adder                                           : 1
+ 4-bit adder                                           : 1
+ 8-bit subtractor                                      : 1
+# Registers                                            : 50
+ 1-bit register                                        : 33
+ 11-bit register                                       : 1
+ 16-bit register                                       : 3
+ 2-bit register                                        : 1
+ 20-bit register                                       : 1
+ 24-bit register                                       : 2
+ 3-bit register                                        : 1
+ 4-bit register                                        : 1
+ 8-bit register                                        : 5
+ 9-bit register                                        : 2
+# Comparators                                          : 4
+ 16-bit comparator equal                               : 1
+ 8-bit comparator greater                              : 2
+ 8-bit comparator lessequal                            : 1
+# Multiplexers                                         : 4
+ 1-bit 2-to-1 multiplexer                              : 2
+ 16-bit 2-to-1 multiplexer                             : 1
+ 8-bit 4-to-1 multiplexer                              : 1
+
+=========================================================================
+
+=========================================================================
+*                       Advanced HDL Synthesis                          *
+=========================================================================
+
+Reading core <ipcore_dir/adc_fifo.ngc>.
+Reading core <ipcore_dir/ROM_WAVE.ngc>.
+Reading core <ipcore_dir/ROM_square.ngc>.
+Reading core <ipcore_dir/ROM_TRIANG.ngc>.
+Loading core <adc_fifo> for timing and area information for instance <ad_fifo_inst>.
+Loading core <ROM_WAVE> for timing and area information for instance <ROM_inst>.
+Loading core <ROM_square> for timing and area information for instance <ROM_square_inst>.
+Loading core <ROM_TRIANG> for timing and area information for instance <ROM_TRIANG_inst>.
+WARNING:Xst:1710 - FF/Latch <trig_level_0> (without init value) has a constant value of 0 in block <adda_test>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <trig_level_1> (without init value) has a constant value of 0 in block <adda_test>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <trig_level_2> (without init value) has a constant value of 1 in block <adda_test>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <trig_level_3> (without init value) has a constant value of 1 in block <adda_test>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <trig_level_4> (without init value) has a constant value of 1 in block <adda_test>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <trig_level_5> (without init value) has a constant value of 1 in block <adda_test>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <trig_level_6> (without init value) has a constant value of 1 in block <adda_test>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <trig_level_7> (without init value) has a constant value of 0 in block <adda_test>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:2404 -  FFs/Latches <trig_level<7:7>> (without init value) have a constant value of 0 in block <adda_test>.
+
+Synthesizing (advanced) Unit <adda_test>.
+The following registers are absorbed into accumulator <accumulator>: 1 register on signal <accumulator>.
+The following registers are absorbed into counter <extract_cnt>: 1 register on signal <extract_cnt>.
+The following registers are absorbed into counter <count>: 1 register on signal <count>.
+The following registers are absorbed into counter <which_wave_cnt>: 1 register on signal <which_wave_cnt>.
+The following registers are absorbed into counter <cnt>: 1 register on signal <cnt>.
+INFO:Xst:3231 - The small RAM <Mram__n0161> will be implemented on LUTs in order to maximize performance and save block RAM resources. If you want to force its implementation on block, use option/constraint ram_style.
+    -----------------------------------------------------------------------
+    | ram_type           | Distributed                         |          |
+    -----------------------------------------------------------------------
+    | Port A                                                              |
+    |     aspect ratio   | 8-word x 16-bit                     |          |
+    |     weA            | connected to signal <GND>           | high     |
+    |     addrA          | connected to signal <extract_cnt<2:0>> |          |
+    |     diA            | connected to signal <GND>           |          |
+    |     doA            | connected to internal node          |          |
+    -----------------------------------------------------------------------
+INFO:Xst:3231 - The small RAM <Mram_cnt[2]_GND_1_o_wide_mux_11_OUT> will be implemented on LUTs in order to maximize performance and save block RAM resources. If you want to force its implementation on block, use option/constraint ram_style.
+    -----------------------------------------------------------------------
+    | ram_type           | Distributed                         |          |
+    -----------------------------------------------------------------------
+    | Port A                                                              |
+    |     aspect ratio   | 8-word x 24-bit                     |          |
+    |     weA            | connected to signal <GND>           | high     |
+    |     addrA          | connected to signal <cnt>           |          |
+    |     diA            | connected to signal <GND>           |          |
+    |     doA            | connected to internal node          |          |
+    -----------------------------------------------------------------------
+Unit <adda_test> synthesized (advanced).
+
+Synthesizing (advanced) Unit <trig>.
+The following registers are absorbed into counter <pre_tri_cnt>: 1 register on signal <pre_tri_cnt>.
+The following registers are absorbed into counter <auto_tri_cnt>: 1 register on signal <auto_tri_cnt>.
+Unit <trig> synthesized (advanced).
+
+=========================================================================
+Advanced HDL Synthesis Report
+
+Macro Statistics
+# RAMs                                                 : 2
+ 8x16-bit single-port distributed Read Only RAM        : 1
+ 8x24-bit single-port distributed Read Only RAM        : 1
+# Adders/Subtractors                                   : 2
+ 16-bit adder                                          : 1
+ 8-bit subtractor                                      : 1
+# Counters                                             : 6
+ 11-bit up counter                                     : 1
+ 16-bit up counter                                     : 1
+ 2-bit up counter                                      : 1
+ 20-bit up counter                                     : 1
+ 3-bit up counter                                      : 1
+ 4-bit up counter                                      : 1
+# Accumulators                                         : 1
+ 24-bit up accumulator                                 : 1
+# Registers                                            : 146
+ Flip-Flops                                            : 146
+# Comparators                                          : 4
+ 16-bit comparator equal                               : 1
+ 8-bit comparator greater                              : 2
+ 8-bit comparator lessequal                            : 1
+# Multiplexers                                         : 2
+ 16-bit 2-to-1 multiplexer                             : 1
+ 8-bit 4-to-1 multiplexer                              : 1
+
+=========================================================================
+
+=========================================================================
+*                         Low Level Synthesis                           *
+=========================================================================
+WARNING:Xst:1710 - FF/Latch <trig_level_0> (without init value) has a constant value of 0 in block <adda_test>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <trig_level_1> (without init value) has a constant value of 0 in block <adda_test>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <trig_level_2> (without init value) has a constant value of 1 in block <adda_test>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <trig_level_3> (without init value) has a constant value of 1 in block <adda_test>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <trig_level_4> (without init value) has a constant value of 1 in block <adda_test>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <trig_level_5> (without init value) has a constant value of 1 in block <adda_test>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <trig_level_6> (without init value) has a constant value of 1 in block <adda_test>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <extract_num_7> (without init value) has a constant value of 0 in block <adda_test>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <extract_num_8> (without init value) has a constant value of 0 in block <adda_test>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <extract_num_9> (without init value) has a constant value of 0 in block <adda_test>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <extract_num_10> (without init value) has a constant value of 0 in block <adda_test>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <extract_num_11> (without init value) has a constant value of 0 in block <adda_test>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <extract_num_12> (without init value) has a constant value of 0 in block <adda_test>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <extract_num_13> (without init value) has a constant value of 0 in block <adda_test>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <extract_num_14> (without init value) has a constant value of 0 in block <adda_test>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <extract_num_15> (without init value) has a constant value of 0 in block <adda_test>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <step_18> (without init value) has a constant value of 0 in block <adda_test>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <step_19> (without init value) has a constant value of 0 in block <adda_test>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <step_20> (without init value) has a constant value of 0 in block <adda_test>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <step_21> (without init value) has a constant value of 0 in block <adda_test>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <step_22> (without init value) has a constant value of 0 in block <adda_test>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <step_23> (without init value) has a constant value of 0 in block <adda_test>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:2677 - Node <ad_data_trig_0> of sequential type is unconnected in block <adda_test>.
+WARNING:Xst:2677 - Node <ad_data_trig_1> of sequential type is unconnected in block <adda_test>.
+INFO:Xst:2261 - The FF/Latch <step_7> in Unit <adda_test> is equivalent to the following FF/Latch, which will be removed : <step_14> 
+
+Optimizing unit <adda_test> ...
+
+Optimizing unit <trig> ...
+WARNING:Xst:1710 - FF/Latch <extract_cnt_3> (without init value) has a constant value of 0 in block <adda_test>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <count_19> (without init value) has a constant value of 0 in block <adda_test>. This FF/Latch will be trimmed during the optimization process.
+INFO:Xst:2261 - The FF/Latch <LED1> in Unit <adda_test> is equivalent to the following FF/Latch, which will be removed : <trig_ins/full_dly> 
+INFO:Xst:2261 - The FF/Latch <LED2> in Unit <adda_test> is equivalent to the following FF/Latch, which will be removed : <trig_ins/digital_trigged_sig_dly> 
+
+Mapping all equations...
+Building and optimizing final netlist ...
+Found area constraint ratio of 100 (+ 5) on block adda_test, actual ratio is 5.
+INFO:Xst:2260 - The FF/Latch <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/grss.rsts/ram_empty_i> in Unit <ad_fifo_inst> is equivalent to the following FF/Latch : <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/grss.rsts/ram_empty_fb_i> 
+INFO:Xst:2260 - The FF/Latch <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/rstblk/ngwrdrst.grst.rd_rst_reg_2> in Unit <ad_fifo_inst> is equivalent to the following FF/Latch : <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/rstblk/ngwrdrst.grst.rd_rst_reg_0> 
+INFO:Xst:2260 - The FF/Latch <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.wr/gwss.wsts/ram_full_i> in Unit <ad_fifo_inst> is equivalent to the following FF/Latch : <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.wr/gwss.wsts/ram_full_fb_i> 
+INFO:Xst:2260 - The FF/Latch <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/grss.rsts/ram_empty_i> in Unit <ad_fifo_inst> is equivalent to the following FF/Latch : <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/grss.rsts/ram_empty_fb_i> 
+INFO:Xst:2260 - The FF/Latch <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/rstblk/ngwrdrst.grst.rd_rst_reg_2> in Unit <ad_fifo_inst> is equivalent to the following FF/Latch : <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/rstblk/ngwrdrst.grst.rd_rst_reg_0> 
+INFO:Xst:2260 - The FF/Latch <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.wr/gwss.wsts/ram_full_i> in Unit <ad_fifo_inst> is equivalent to the following FF/Latch : <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.wr/gwss.wsts/ram_full_fb_i> 
+
+Final Macro Processing ...
+
+Processing Unit <adda_test> :
+	Found 2-bit shift register for signal <rom_sin_addr_0>.
+	Found 2-bit shift register for signal <rom_sin_addr_1>.
+	Found 2-bit shift register for signal <rom_sin_addr_2>.
+	Found 2-bit shift register for signal <rom_sin_addr_3>.
+	Found 2-bit shift register for signal <rom_sin_addr_4>.
+	Found 2-bit shift register for signal <rom_sin_addr_5>.
+	Found 2-bit shift register for signal <rom_sin_addr_6>.
+	Found 2-bit shift register for signal <rom_sin_addr_7>.
+	Found 2-bit shift register for signal <rom_sin_addr_8>.
+Unit <adda_test> processed.
+
+=========================================================================
+Final Register Report
+
+Macro Statistics
+# Registers                                            : 179
+ Flip-Flops                                            : 179
+# Shift Registers                                      : 9
+ 2-bit shift register                                  : 9
+
+=========================================================================
+
+=========================================================================
+*                           Partition Report                            *
+=========================================================================
+
+Partition Implementation Status
+-------------------------------
+
+  No Partitions were found in this design.
+
+-------------------------------
+
+=========================================================================
+*                            Design Summary                             *
+=========================================================================
+
+Top Level Output File Name         : adda_test.ngc
+
+Primitive and Black Box Usage:
+------------------------------
+# BELS                             : 436
+#      GND                         : 6
+#      INV                         : 12
+#      LUT1                        : 65
+#      LUT2                        : 60
+#      LUT3                        : 30
+#      LUT4                        : 31
+#      LUT5                        : 15
+#      LUT6                        : 18
+#      MUXCY                       : 108
+#      VCC                         : 5
+#      XORCY                       : 86
+# FlipFlops/Latches                : 243
+#      FD                          : 98
+#      FDC                         : 1
+#      FDCE                        : 37
+#      FDE                         : 18
+#      FDP                         : 12
+#      FDPE                        : 1
+#      FDR                         : 45
+#      FDRE                        : 30
+#      FDS                         : 1
+# RAMS                             : 4
+#      RAMB8BWER                   : 4
+# Shift Registers                  : 9
+#      SRLC16E                     : 9
+# Clock Buffers                    : 2
+#      BUFG                        : 2
+# IO Buffers                       : 28
+#      IBUF                        : 12
+#      IBUFG                       : 1
+#      OBUF                        : 15
+# DCMs                             : 1
+#      DCM_SP                      : 1
+
+Device utilization summary:
+---------------------------
+
+Selected Device : 6slx9ftg256-2 
+
+
+Slice Logic Utilization: 
+ Number of Slice Registers:             243  out of  11440     2%  
+ Number of Slice LUTs:                  240  out of   5720     4%  
+    Number used as Logic:               231  out of   5720     4%  
+    Number used as Memory:                9  out of   1440     0%  
+       Number used as SRL:                9
+
+Slice Logic Distribution: 
+ Number of LUT Flip Flop pairs used:    311
+   Number with an unused Flip Flop:      68  out of    311    21%  
+   Number with an unused LUT:            71  out of    311    22%  
+   Number of fully used LUT-FF pairs:   172  out of    311    55%  
+   Number of unique control sets:        21
+
+IO Utilization: 
+ Number of IOs:                          28
+ Number of bonded IOBs:                  28  out of    186    15%  
+
+Specific Feature Utilization:
+ Number of Block RAM/FIFO:                2  out of     32     6%  
+    Number using Block RAM only:          2
+ Number of BUFG/BUFGCTRLs:                2  out of     16    12%  
+
+---------------------------
+Partition Resource Summary:
+---------------------------
+
+  No Partitions were found in this design.
+
+---------------------------
+
+
+=========================================================================
+Timing Report
+
+NOTE: THESE TIMING NUMBERS ARE ONLY A SYNTHESIS ESTIMATE.
+      FOR ACCURATE TIMING INFORMATION PLEASE REFER TO THE TRACE REPORT
+      GENERATED AFTER PLACE-and-ROUTE.
+
+Clock Information:
+------------------
+-----------------------------------+-----------------------------------------------------------------------------------------------------------------------------------------+-------+
+Clock Signal                       | Clock buffer(FF name)                                                                                                                   | Load  |
+-----------------------------------+-----------------------------------------------------------------------------------------------------------------------------------------+-------+
+crystal_clk                        | DCM_SP:CLKDV                                                                                                                            | 185   |
+crystal_clk                        | DCM_SP:CLK0                                                                                                                             | 71    |
+ROM_inst/N1                        | NONE(ROM_inst/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/s6_init.ram/SP.SIMPLE_PRIM9.ram)       | 1     |
+ROM_square_inst/N1                 | NONE(ROM_square_inst/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/s6_init.ram/SP.SIMPLE_PRIM9.ram)| 1     |
+ROM_TRIANG_inst/N1                 | NONE(ROM_TRIANG_inst/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/s6_init.ram/SP.SIMPLE_PRIM9.ram)| 1     |
+-----------------------------------+-----------------------------------------------------------------------------------------------------------------------------------------+-------+
+INFO:Xst:2169 - HDL ADVISOR - Some clock signals were not automatically buffered by XST with BUFG/BUFR resources. Please use the buffer_type constraint in order to insert these buffers to the clock signals to help prevent skew problems.
+
+Asynchronous Control Signals Information:
+----------------------------------------
+No asynchronous control signals found in this design
+
+Timing Summary:
+---------------
+Speed Grade: -2
+
+   Minimum period: 4.219ns (Maximum Frequency: 237.009MHz)
+   Minimum input arrival time before clock: 2.083ns
+   Maximum output required time after clock: 4.277ns
+   Maximum combinational path delay: No path found
+
+Timing Details:
+---------------
+All values displayed in nanoseconds (ns)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'crystal_clk'
+  Clock period: 4.219ns (frequency: 237.009MHz)
+  Total number of paths / destination ports: 3109 / 493
+-------------------------------------------------------------------------
+Delay:               4.219ns (Levels of Logic = 8)
+  Source:            extract_num_2 (FF)
+  Destination:       trig_ins/fifo_wr_en (FF)
+  Source Clock:      crystal_clk rising
+  Destination Clock: crystal_clk rising 0.5X
+
+  Data Path: extract_num_2 to trig_ins/fifo_wr_en
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDR:C->Q              1   0.525   0.910  extract_num_2 (extract_num_2)
+     LUT6:I3->O            1   0.235   0.000  trig_ins/Mcompar_fifo_wr_cnt[15]_extract_num[15]_equal_28_o_lut<0> (trig_ins/Mcompar_fifo_wr_cnt[15]_extract_num[15]_equal_28_o_lut<0>)
+     MUXCY:S->O            1   0.215   0.000  trig_ins/Mcompar_fifo_wr_cnt[15]_extract_num[15]_equal_28_o_cy<0> (trig_ins/Mcompar_fifo_wr_cnt[15]_extract_num[15]_equal_28_o_cy<0>)
+     MUXCY:CI->O           1   0.023   0.000  trig_ins/Mcompar_fifo_wr_cnt[15]_extract_num[15]_equal_28_o_cy<1> (trig_ins/Mcompar_fifo_wr_cnt[15]_extract_num[15]_equal_28_o_cy<1>)
+     MUXCY:CI->O           1   0.023   0.000  trig_ins/Mcompar_fifo_wr_cnt[15]_extract_num[15]_equal_28_o_cy<2> (trig_ins/Mcompar_fifo_wr_cnt[15]_extract_num[15]_equal_28_o_cy<2>)
+     MUXCY:CI->O           1   0.023   0.000  trig_ins/Mcompar_fifo_wr_cnt[15]_extract_num[15]_equal_28_o_cy<3> (trig_ins/Mcompar_fifo_wr_cnt[15]_extract_num[15]_equal_28_o_cy<3>)
+     MUXCY:CI->O           1   0.023   0.000  trig_ins/Mcompar_fifo_wr_cnt[15]_extract_num[15]_equal_28_o_cy<4> (trig_ins/Mcompar_fifo_wr_cnt[15]_extract_num[15]_equal_28_o_cy<4>)
+     MUXCY:CI->O          17   0.023   1.208  trig_ins/Mcompar_fifo_wr_cnt[15]_extract_num[15]_equal_28_o_cy<5> (trig_ins/fifo_wr_fifo_wr_cnt[15]_AND_31_o_norst)
+     INV:I->O              1   0.255   0.681  trig_ins/Mcompar_fifo_wr_cnt[15]_extract_num[15]_equal_28_o_cy<5>_inv_INV_0 (trig_ins/Mcompar_fifo_wr_cnt[15]_extract_num[15]_equal_28_o_cy<5>_inv)
+     FDR:D                     0.074          trig_ins/fifo_wr_en
+    ----------------------------------------
+    Total                      4.219ns (1.420ns logic, 2.799ns route)
+                                       (33.7% logic, 66.3% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'crystal_clk'
+  Total number of paths / destination ports: 12 / 12
+-------------------------------------------------------------------------
+Offset:              2.083ns (Levels of Logic = 1)
+  Source:            addata_in<0> (PAD)
+  Destination:       ad_data_0 (FF)
+  Destination Clock: crystal_clk rising 0.5X
+
+  Data Path: addata_in<0> to ad_data_0
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O             1   1.328   0.681  addata_in_0_IBUF (addata_in_0_IBUF)
+     FD:D                      0.074          ad_data_0
+    ----------------------------------------
+    Total                      2.083ns (1.402ns logic, 0.681ns route)
+                                       (67.3% logic, 32.7% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'crystal_clk'
+  Total number of paths / destination ports: 12 / 12
+-------------------------------------------------------------------------
+Offset:              4.277ns (Levels of Logic = 1)
+  Source:            LED1 (FF)
+  Destination:       LED1 (PAD)
+  Source Clock:      crystal_clk rising 0.5X
+
+  Data Path: LED1 to LED1
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FD:C->Q               5   0.525   0.840  LED1 (LED1_OBUF)
+     OBUF:I->O                 2.912          LED1_OBUF (LED1)
+    ----------------------------------------
+    Total                      4.277ns (3.437ns logic, 0.840ns route)
+                                       (80.4% logic, 19.6% route)
+
+=========================================================================
+
+Cross Clock Domains Report:
+--------------------------
+
+Clock to Setup on destination clock crystal_clk
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+crystal_clk    |    4.896|         |         |         |
+---------------+---------+---------+---------+---------+
+
+=========================================================================
+
+
+Total REAL time to Xst completion: 5.00 secs
+Total CPU time to Xst completion: 4.62 secs
+ 
+--> 
+
+Total memory usage is 266856 kilobytes
+
+Number of errors   :    0 (   0 filtered)
+Number of warnings :   65 (   0 filtered)
+Number of infos    :   14 (   0 filtered)
+
